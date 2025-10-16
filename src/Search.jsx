@@ -8,7 +8,7 @@ const Search = () => {
     <form className="search-form" onSubmit={(e) => e.preventDefault()}>
       <input
         type="text"
-        placeholder="Search movie title"
+        placeholder="Search title"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
