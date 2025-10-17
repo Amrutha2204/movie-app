@@ -1,9 +1,7 @@
 import React from 'react';
 import { useMovieContext } from './Context/MovieContext';
-
 const Search = () => {
   const { searchTerm, setSearchTerm } = useMovieContext();
-
   return (
     <form className="search-form" onSubmit={(e) => e.preventDefault()}>
       <input
@@ -15,5 +13,4 @@ const Search = () => {
     </form>
   );
 };
-
 export default Search;

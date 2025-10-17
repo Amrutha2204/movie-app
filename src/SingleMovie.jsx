@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 import { API_URL } from './Context/MovieContext'; 
-
 const SingleMovie = () => {
   const { id } = useParams();
-  
   const [movie, setMovie] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-
   const getSingleMovie = async (url) => {
     try {
       const res = await fetch(url);
       const data = await res.json();
-      
       if (data.Response === "True") {
         setMovie(data);
         setIsLoading(false);
@@ -24,23 +20,17 @@ const SingleMovie = () => {
       setIsLoading(false);
     }
   };
-
   useEffect(() => {
     getSingleMovie(`${API_URL}&i=${id}`);
-    
     return () => setMovie(null); 
   }, [id]); 
-
   if (isLoading) {
     return <div className="loading-details">Loading movie details...</div>;
   }
-  
   if (!movie) {
     return <div className="error-details">Movie details not found.</div>;
   }
-
   const { Poster, Title, Released, Genre, imdbRating, Country, Plot } = movie;
-
   return (
     <section className="single-movie-section">
       <div className="movie-card">
@@ -61,5 +51,4 @@ const SingleMovie = () => {
     </section>
   );
 };
-
 export default SingleMovie;

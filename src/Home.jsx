@@ -5,24 +5,19 @@ import Search from './Search';
 
 const Home = () => {
   const { movies, isLoading, isError } = useMovieContext();
-
   if (isLoading) {
     return <div className="loading">Loading movies...</div>;
   }
-
   if (isError || movies.length === 0) {
     return <div className="error-message">Sorry, no movies found. Please try a different search.</div>;
   }
-
   return (
     <section className="movie-page">
       <h1 style={{ textAlign: 'center', margin: '20px 0', color: '#b3d5dfff' }}>
         The Movie App
       </h1>
       <hr style={{ borderColor: '#30363d', marginBottom: '30px' }} />
-      
       <Search />
-      
       <div className="container movie-grid">
         {movies.map((currentMovie) => {
           const { imdbID, Title, Poster } = currentMovie;
@@ -44,5 +39,4 @@ const Home = () => {
     </section>
   );
 };
-
 export default Home;
