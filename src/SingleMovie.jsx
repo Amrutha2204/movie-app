@@ -25,10 +25,10 @@ const SingleMovie = () => {
     return () => setMovie(null); 
   }, [id]); 
   if (isLoading) {
-    return <div className="loading-details">Loading movie details...</div>;
+    return <div className="loading-details">Loading movie details....</div>;
   }
   if (!movie) {
-    return <div className="error-details">Movie details not found.</div>;
+    return <div className="error-details">Movie not found.</div>;
   }
   const { Poster, Title, Released, Genre, imdbRating, Country, Plot } = movie;
   return (

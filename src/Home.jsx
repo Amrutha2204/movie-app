@@ -9,7 +9,7 @@ const Home = () => {
     return <div className="loading">Loading movies...</div>;
   }
   if (isError || movies.length === 0) {
-    return <div className="error-message">Sorry, no movies found. Please try a different search.</div>;
+    return <div className="error-message">Sorry, no movies found.</div>;
   }
   return (
     <section className="movie-page">
