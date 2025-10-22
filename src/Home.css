@@ -1,0 +1,90 @@
+/* Container for the entire home page */
+.movie-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive grid layout for the movie posters */
+.movie-grid {
+    display: grid;
+    /* Columns adjust dynamically based on screen size */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+/* Styling for the clickable movie link */
+.movie-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Individual Movie Card */
+.card {
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #161b22; /* Dark card background */
+}
+
+/* Hover effect for interaction */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Poster Image */
+.card img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+    display: block;
+}
+
+/* Text area below the poster */
+.card-info {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Movie Title */
+.card-info h2 {
+    font-size: 1.1em;
+    margin: 0 0 5px 0;
+    color: #FFD700; /* Vibrant Gold title color */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Search bar styling (placed here for convenience, though often global) */
+.search-form {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.search-form input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 15px;
+    border: 1px solid #30363d;
+    border-radius: 20px;
+    background-color: #21262d;
+    color: #c9d1d9;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-form input:focus {
+    border-color: #61dafb; /* React Blue focus color */
+}
+
+/* Loading and Error Messages */
+.loading, .error-message {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.5em;
+    color: #ff7b72;
+}

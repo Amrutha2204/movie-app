@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useMovieContext } from './Context/MovieContext';
 import Search from './Search';
-
+import './Home.css';
 const Home = () => {
   const { movies, isLoading, isError } = useMovieContext();
   if (isLoading) {
