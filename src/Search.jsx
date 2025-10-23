@@ -15,7 +15,7 @@ const Search = () => {
       <form onSubmit={handleSearch} style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
         <input
           type="text"
-          placeholder="Search movie title"
+          placeholder="Search your movie title"
           
           value={inputTerm}
           onChange={(e) => setInputTerm(e.target.value)}
