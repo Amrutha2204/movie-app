@@ -7,8 +7,8 @@ const MovieProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-  const [inputTerm, setInputTerm] = useState('the batman');
-  const [searchQuery, setSearchQuery] = useState('the batman');
+  const [inputTerm, setInputTerm] = useState('batman');
+  const [searchQuery, setSearchQuery] = useState('batman');
 
   const fetchMovies = async (url) => {
     setIsLoading(true);
